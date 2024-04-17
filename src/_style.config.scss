@@ -1,0 +1,28 @@
+// color config
+$colors: (
+  primary: #365ac2,
+  secondary: #36a1c2,
+  tertiary:  #4d4d4d,
+  light: #fff
+);
+
+// fonts
+$sizes: (
+  sm: 16,
+  md: 18,
+  lg: 22,
+  xl: 32
+);
+
+@mixin font-size($size) {
+  font-size: map-get($sizes, $size) + px;
+  line-height: calc($size * 1.5) + px;
+}
+
+@mixin color($color, $opacity: 1) {
+  color: rgba(map-get($colors, $color), $opacity);
+}
+
+@mixin background($color, $opacity: 1) {
+  background-color: rgba(map-get($colors, $color), $opacity);
+}

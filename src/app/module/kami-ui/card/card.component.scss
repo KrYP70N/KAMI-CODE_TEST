@@ -1,0 +1,9 @@
+@import '../../../../style.config';
+
+.kami-card {
+  @include font-size(xl);
+  @include color(secondary);
+  padding: 16px;
+  box-shadow: 1px 1px 10px rgba(#333, .5);
+  border-radius: 8px;
+}
