@@ -3,6 +3,8 @@ $colors: (
   primary: #365ac2,
   secondary: #36a1c2,
   tertiary:  #4d4d4d,
+  background: #0d1e52,
+  light-gray: #c5c5c5,
   light: #fff
 );
 
@@ -25,4 +27,16 @@ $sizes: (
 
 @mixin background($color, $opacity: 1) {
   background-color: rgba(map-get($colors, $color), $opacity);
+}
+
+@mixin transition($target: all) {
+  transition: $target .3s ease;
+}
+
+@mixin border($color: dark, $stoke: 1) {
+  border: ($stoke + px) solid map-get($colors, $color);
+}
+
+@mixin border-left($color: dark, $stoke: 1) {
+  border-left: ($stoke + px) solid map-get($colors, $color);
 }

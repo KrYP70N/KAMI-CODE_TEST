@@ -1,0 +1,105 @@
+@import '../../../../style.config';
+
+header {
+  @include background(primary);
+  @include color(light);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 120px;
+  }
+
+  .icn-drawer {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    span {
+      @include background(light);
+      @include transition();
+      display: block;
+      width: 100%;
+      height: 2px;
+    }
+
+    &.active {
+      span {
+        &:first-child {
+          transform: rotate(45deg) translate(7px, 6px);
+        }
+        &:last-child {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+        &:nth-child(2) {
+          transform: translateX(5px);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// drawer
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+
+  aside {
+    @include background(light, .8);
+    @include transition();
+    @include color(tertiary);
+    width: 250px;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    box-shadow: 1px 1px 3px rgba(map-get($colors, tertiary), .25);
+    a {
+      @include color(tertiary);
+      text-decoration: none;
+    }
+    nav {
+      width: 250px;
+      padding: 16px;
+      ul {
+        @include font-size(md);
+        padding-left: 0;
+        list-style: none;
+        text-transform: uppercase;
+        li {
+          a {
+            display: block;
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    @include transition();
+    width: calc(100% - 250px);
+    main {
+      height: calc(100% - 48px);
+      overflow-y: auto;
+    }
+  }
+
+  &.drawer-open {
+    aside {
+      width: 0;
+    }
+
+    .main {
+      width: 100%;
+    }
+  }
+}

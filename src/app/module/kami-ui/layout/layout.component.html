@@ -1,11 +1,41 @@
-<header>
-  <a routerLink="/">Home</a>
-</header>
+<div class="content-wrapper" [class.drawer-open]="!active">
 
-<main>
-  <ng-content />
-</main>
+  <aside>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Users</a>
+        </li>
+        <li>
+          <a href="#">Posts</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 
-<footer>
-  footer
-</footer>
+  <section class="main">
+    <header class="container-fluid">
+      <div class="icn-drawer" [class.active]="active" #drawer>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <a href="#">
+        <img src="./assets/kami-black-white.svg" alt="KAMI Workforce" class="logo">
+      </a>
+    </header>
+
+    <main>
+      <ng-content />
+    </main>
+  </section>
+
+
+</div>

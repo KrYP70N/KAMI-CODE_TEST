@@ -1,0 +1,18 @@
+@import '../../../../style.config';
+
+.fieldset {
+  @include border(light-gray);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  h3 {
+    @include background(light-gray);
+    @include font-size(md);
+    @include color(light);
+    padding: 12px;
+    margin-bottom: 0;
+  }
+  &-content {
+    padding: 12px;
+  }
+}

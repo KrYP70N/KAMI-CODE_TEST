@@ -1,0 +1,23 @@
+@import '../../../../style.config';
+
+ul {
+  @include color(tertiary);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    width: 100px;
+    text-align: center;
+    h3 {
+      @include font-size(md);
+    }
+    p {
+      @include color(secondary);
+      @include font-size(lg);
+      font-weight: 800;
+    }
+  }
+}

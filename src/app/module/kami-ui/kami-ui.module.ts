@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { TableComponent } from './table/table.component';
 import { PrimaryLayout } from './layout/layout.component';
+import { FieldsetComponent } from './fieldset/fieldset.component';
 
 const components = [
   CardComponent,
   TableComponent,
-  PrimaryLayout
+  PrimaryLayout,
+  FieldsetComponent
 ]
 
 @NgModule({

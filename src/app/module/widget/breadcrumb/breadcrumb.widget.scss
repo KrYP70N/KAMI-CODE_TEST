@@ -1,0 +1,20 @@
+@import '../../../../style.config';
+
+.kami-breadcrumb {
+  @include color(light);
+  @include background(secondary);
+  @include font-size(sm);
+  padding: 16px;
+  margin-bottom: 16px;
+  h2 {
+    margin-bottom: 18px;
+  }
+  span {
+    @include border-left(light, 2);
+    display: inline-block;
+    padding: 2px;
+    margin-left: 16px;
+    padding-left: 16px;
+    font-weight: 500;
+  }
+}
