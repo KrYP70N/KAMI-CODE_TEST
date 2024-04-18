@@ -1,15 +1,14 @@
 <breadcrumb page="Test Page"/>
 <article class="container-fluid">
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-5">
       <fieldset fieldName="Status">
         <status-widget />
       </fieldset>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-7">
       <fieldset fieldName="Status">
-        Dashboard<br/>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto placeat cumque, commodi incidunt repellat laudantium voluptas iste voluptate fuga, impedit culpa necessitatibus neque sed corporis iure eligendi? Quis, doloribus atque.
+        <post-widget [param]="{userId: 2}" [page]="1"/>
       </fieldset>
     </div>
   </div>

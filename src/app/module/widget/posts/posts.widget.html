@@ -1,0 +1,19 @@
+<kami-table>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>UID</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of pageData">
+        <td>{{item.id}}</td>
+        <td>{{item.userId}}</td>
+        <td>{{item.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</kami-table>

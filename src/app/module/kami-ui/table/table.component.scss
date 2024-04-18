@@ -1,0 +1,21 @@
+@import '../../../../style.config';
+
+table {
+  width: 100%;
+  th, td {
+    padding: 8px;
+  }
+  thead {
+    @include background(primary, .5);
+    th {
+      font-weight: 500;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        @include background(background, .1)
+      }
+    }
+  }
+}
